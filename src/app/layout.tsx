@@ -1,20 +1,24 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import React from 'react';
+import type { Metadata } from 'next';
+import { getPageMetadata } from "./metadata";
 
-export const metadata: Metadata = {
-  title: "My Portfolio", // default title for the portfolio
-  description: "A description for the portfolio",
-};
+export async function generateMetadata(pageId: string): Promise<Metadata> {
+    const pageMetadata = await getPageMetadata(pageId);
+    return {
+        title: pageMetadata?.title || "Default Title",
+        description: pageMetadata?.description || "Default Description",
+    };
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

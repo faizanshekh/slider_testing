@@ -1,0 +1,19 @@
+[
+
+    {
+        "id": "/",
+        "title": "Home page",
+        "description": "Vestibulum metus eget ligula ornare vehicula eleifend hendrerit pharetra scelerisque metus efficitur."
+    },
+    {
+        "id": "services",
+        "title": "Services page",
+        "description": "Vestibulum metus eget ligula ornare vehicula eleifend hendrerit pharetra scelerisque metus efficitur."
+    },
+    {
+        "id": "blog",
+        "title": "Blog page",
+        "description": "Vestibulum metus eget ligula ornare vehicula eleifend hendrerit pharetra scelerisque metus efficitur."
+    }
+    
+]
